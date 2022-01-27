@@ -1,8 +1,8 @@
 {
   "files": {
-    "main.js": "/haiduknavy/goit-react-hw-03-image-finder/static/js/main.7a488cc4.js",
-    "index.html": "/haiduknavy/goit-react-hw-03-image-finder/index.html",
-    "main.7a488cc4.js.map": "/haiduknavy/goit-react-hw-03-image-finder/static/js/main.7a488cc4.js.map"
+    "main.js": "/goit-react-hw-03-image-finder/static/js/main.7a488cc4.js",
+    "index.html": "/goit-react-hw-03-image-finder/index.html",
+    "main.7a488cc4.js.map": "/goit-react-hw-03-image-finder/static/js/main.7a488cc4.js.map"
   },
   "entrypoints": [
     "static/js/main.7a488cc4.js"
