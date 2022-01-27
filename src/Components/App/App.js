@@ -34,6 +34,7 @@ export default class App extends Component {
               timeout: 2500,
               width: "30%",
             });
+            Loading.remove();
           } else {
             this.setState({ gallery: response, status: "resolved" });
           }
