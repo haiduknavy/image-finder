@@ -45,12 +45,22 @@ export default class App extends Component {
 
       fetchGallery(inputQuerry, page)
         .then((data) => data.hits)
-        .then((response) =>
-          this.setState((prevState) => ({
-            gallery: [...prevState.gallery, ...response],
-            status: "resolved",
-          }))
-        );
+        .then((response) => {
+          if (response.length === 0) {
+            Notify.failure("Sorry, we couldn't find any matches", {
+              position: "center-center",
+              fontSize: "24px",
+              timeout: 2500,
+              width: "30%",
+            });
+            Loading.remove();
+          } else {
+            this.setState((prevState) => ({
+              gallery: [...prevState.gallery, ...response],
+              status: "resolved",
+            }));
+          }
+        });
     }
   }
 
@@ -62,6 +72,7 @@ export default class App extends Component {
     this.setState((prevState) => ({
       page: prevState.page + 1,
     }));
+    console.log("LOAD MORE");
   };
 
   modalImg = (id, img, tags) => {
