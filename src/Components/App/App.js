@@ -72,7 +72,6 @@ export default class App extends Component {
     this.setState((prevState) => ({
       page: prevState.page + 1,
     }));
-    console.log("LOAD MORE");
   };
 
   modalImg = (id, img, tags) => {
